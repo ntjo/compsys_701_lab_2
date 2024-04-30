@@ -58,11 +58,11 @@ int main()
 	uint16_t bitmask = IORD_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE);
 
 	int dataNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_32_BASE);
-	int dataNOCWR = IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE);
+	//int dataNOCWR = IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE);
 	int dataNOCsplit[8];
 
 	int addrNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
-	int addrNOCWR = IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
+	//int addrNOCWR = IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
 
 	while(1) {
 
@@ -86,9 +86,67 @@ int main()
 			dataNOCsplit[i] = (dataNOCRD >> (4 * i)) & mask;
 		}
 
-		if ((dataNOCsplit[7] == 8) && ((dataNOCsplit[4] & 0x1) == 1) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 5) ) {
+		if ((dataNOCsplit[7] == 8) && ((dataNOCsplit[4] & 0x1) == 0) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 5) ) {
 			IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 3);
 			IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, dataNOCRD);
+
+		} else if ((dataNOCsplit[7] == 8) && ((dataNOCsplit[4] & 0x1) == 1) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 4) ) {
+			IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 3);
+			IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, dataNOCRD);
+
+		} else {
+
+			switch(state) {
+				case(10):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 3);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0x93100000);
+					state = 9;
+				break;
+				case(9):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 1);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xb1020000);
+					state = 8;
+				break;
+				case(8):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 1);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xb1030000);
+					state = 7;
+				break;
+				case(7):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 0);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xa0220000);
+					state = 6;
+				break;
+				case(6):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 0);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xa0230000);
+					state = 5;
+				break;
+				case(4):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 0);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xa0000000);
+					state = 3;
+				break;
+				case(3):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 0);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xa0010000);
+					state = 2;
+				break;
+				case(2):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 1);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xb1000000);
+					state = 1;
+				break;
+				case(1):
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 1);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0xb1010000);
+					state = 0;
+				break;
+				default:
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 1);
+					IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, 0x00000000);
+				break;
+			}
 
 		}
 	}
