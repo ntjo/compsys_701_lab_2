@@ -1,0 +1,40 @@
+15:42:37 **** Clean-only build of configuration Nios II for project LAB_2_Example ****
+make clean 
+[LAB_2_Example clean complete]
+15:44:31 **** Build of configuration Nios II for project LAB_2_Example ****
+make all 
+Info: Building ../LAB_2_Example_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../LAB_2_Example_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../LAB_2_Example_bsp//HAL/inc -I../LAB_2_Example_bsp/ -I../LAB_2_Example_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:26:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+hello_world.c:25:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+hello_world.c:25:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+hello_world.c:25:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking LAB_2_Example.elf
+nios2-elf-g++  -T'../LAB_2_Example_bsp//linker.x' -msys-crt0='../LAB_2_Example_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../LAB_2_Example_bsp/  -msmallc  -Wl,-Map=LAB_2_Example.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o LAB_2_Example.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert LAB_2_Example.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/LAB_2_Example_bsp/../../Nios_System_2A.sopcinfo
+Info: (LAB_2_Example.elf) 7996 Bytes program size (code + initialized data).
+Info:                     65527 KBytes free for stack + heap.
+Info: Creating LAB_2_Example.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source LAB_2_Example.elf >LAB_2_Example.objdump
+[LAB_2_Example build complete]
+15:44:40 **** Incremental Build of configuration Nios II for project LAB_2_Example_bsp ****
+make all 
+[BSP build complete]
+15:45:40 **** Incremental Build of configuration Nios II for project LAB_2_Example ****
+make all 
+Info: Building ../LAB_2_Example_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../LAB_2_Example_bsp/
+[BSP build complete]
+[LAB_2_Example build complete]

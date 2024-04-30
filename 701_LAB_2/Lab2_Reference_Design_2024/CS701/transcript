@@ -1,0 +1,4 @@
+# do temp_simlib_comp.tmp
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 12:40:35 on Apr 23,2024
+# vcom -work altera -93 c:/intelfpga/18.1/quartus/eda/sim_lib/altera_syn_attributes.vhd 

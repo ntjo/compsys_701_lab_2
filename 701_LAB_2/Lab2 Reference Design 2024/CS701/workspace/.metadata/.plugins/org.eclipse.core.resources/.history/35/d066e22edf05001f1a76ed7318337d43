@@ -1,0 +1,35 @@
+/*
+ * main.c
+ *
+ *  Created on: 29/04/2024
+ *      Author: ntjo268
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "stdbool.h"
+#include "altera_avalon_pio_regs.h"
+#include <stdint.h>
+
+int main()
+{
+	int KEY0, KEY1, KEY2;
+	int input;
+	uint16_t bitmask = IORD_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE);
+	while(1) {
+
+		if (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 6) {
+			bitmask |= (1 << 0);
+			IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, bitmask);
+		} else {
+			bitmask &= ~(1 << 0);
+			IOWR_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE, bitmask);
+		}
+
+	}
+
+	return 0;
+}
+
+
+
