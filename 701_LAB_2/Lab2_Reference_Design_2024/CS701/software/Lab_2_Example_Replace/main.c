@@ -10,6 +10,9 @@
 #include "stdbool.h"
 #include "altera_avalon_pio_regs.h"
 #include <stdint.h>
+#include <alt_types.h>
+#include <sys/alt_irq.h>
+#include <sys/alt_alarm.h>
 
 int display_count(int count) { // decimal
 	switch (count) {
@@ -58,23 +61,31 @@ int main()
 	uint16_t bitmask = IORD_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE);
 
 	int dataNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_32_BASE);
+	printf("\n %d \n", dataNOCRD);
 	//int dataNOCWR = IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE);
 	int dataNOCsplit[8];
 
 	int addrNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
+	printf("\n %d \n", addrNOCRD);
 	//int addrNOCWR = IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
 
 	while(1) {
-
-		if (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 6) {
+		//printf("%d \n", (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE)));
+		//usleep(500);
+		if (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 13) {
+			//printf("button check = 14 \n");
 			if (state > 4){
 				state = 4;
 			} else {
 				state = 10;
 			}
+			count = count + 1;
+			if (count > 9){
+				count = 0;
+			}
+			usleep(250000);
+			printf("%d \n", count);
 		}
-
-		count += count;
 		int digit0 = display_count(count);
 		IOWR_ALTERA_AVALON_PIO_DATA(DIGIT_0_PIO_BASE, digit0);
 
@@ -84,13 +95,17 @@ int main()
 
 		for (int i = 0; i < 8; i++) {
 			dataNOCsplit[i] = (dataNOCRD >> (4 * i)) & mask;
+			//printf("%d \n", dataNOCsplit[i]);
+			//usleep(250000);
 		}
 
-		if ((dataNOCsplit[7] == 8) && ((dataNOCsplit[4] & 0x1) == 0) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 5) ) {
+
+
+		if ((dataNOCsplit[7] == 8) && ((dataNOCsplit[4] & 0x1) == 0) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 11) ) {
 			IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 3);
 			IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, dataNOCRD);
 
-		} else if ((dataNOCsplit[7] == 8) && ((dataNOCsplit[4] & 0x1) == 1) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 4) ) {
+		} else if ((dataNOCsplit[7] == 8) && ((dataNOCsplit[4] & 0x1) == 1) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 7) ) {
 			IOWR_ALTERA_AVALON_PIO_DATA(NOC_8_BASE, 3);
 			IOWR_ALTERA_AVALON_PIO_DATA(NOC_32_BASE, dataNOCRD);
 
@@ -153,6 +168,3 @@ int main()
 
 	return 0;
 }
-
-
-

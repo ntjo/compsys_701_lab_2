@@ -38,9 +38,7 @@ entity TopLevel is
 		DRAM_BA : out std_logic_vector(1 downto 0);
 		DRAM_CAS_N, DRAM_RAS_N, DRAM_CLK : out std_logic;
 		DRAM_CKE, DRAM_CS_N, DRAM_WE_N : out std_logic;
-		DRAM_DQM: out std_logic_vector(1 downto 0)
-		
-	);
+		DRAM_UDQM, DRAM_LDQM: out std_logic);
 end entity;
 
 architecture rtl of TopLevel is
@@ -106,7 +104,8 @@ begin
 			sdram_wire_cke                          => DRAM_CKE,                          --                                 .cke
 			sdram_wire_cs_n                         => DRAM_CS_N,                         --                                 .cs_n
 			sdram_wire_dq                           => DRAM_DQ,                           --                                 .dq
-			sdram_wire_dqm                          => DRAM_DQM,                          --                                 .dqm
+			sdram_wire_dqm(1)                  		 => DRAM_UDQM,                     		--                            	  .dqm
+			sdram_wire_dqm(0)                  		 => DRAM_LDQM,                     		--     
 			sdram_wire_ras_n                        => DRAM_RAS_N,                        --                                 .ras_n
 			sdram_wire_we_n                         => DRAM_WE_N,                         --                                 .we_n
 			switches_pio_external_connection_export => SW, -- switches_pio_external_connection.export
