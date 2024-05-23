@@ -41,7 +41,7 @@ begin
 		send  => send_port(0),
 		recv  => recv_port(0)
 	);
-	asp_dp : entity work.AspDp
+	asp_dp : entity work.ConfigAspAvg
 	port map (
 		clock => clock,
 		send  => send_port(2),
