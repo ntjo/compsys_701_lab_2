@@ -1,0 +1,78 @@
+# transcript error: error writing "stdout": broken pipe
+    while executing
+"puts -nonewline stdout $s"
+# Current time Tue Apr 23 13:20:39 2024
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "2020.2"
+# Version = "2020.04"
+# Date = "Apr 19 2020"
+# Platform = win32
+
+Exception c0000005 has occurred at address 52bf9e6f. Traceback:
+# 0    0x52bf9e6f: 'Tcl_GetString + 0xf'
+# 1    0x52be1f5a: 'TclListObjSetElement + 0x31a'
+# 2    0x52b53a49: 'TclNRRunCallbacks + 0x49'
+StackWalk failed 299
+# End of Stack Trace
+
+# Current time Tue Apr 23 13:20:39 2024
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "2020.2"
+# Version = "2020.04"
+# Date = "Apr 19 2020"
+# Platform = win32
+
+Exception c0000005 has occurred at address 52bf9e6f. Traceback:
+# 0    0x52bf9e6f: 'Tcl_GetString + 0xf'
+# 1    0x52be1f5a: 'TclListObjSetElement + 0x31a'
+# 2    0x52b53a49: 'TclNRRunCallbacks + 0x49'
+# 3    0x52be114d: 'Tcl_ListObjReplace + 0x4d'
+# 4    0x52be09fc: 'Tcl_UpdateLinkedVar + 0xa8c'
+# 5    0x0051eb4e: 'EnumDispProc + 0x27b4e'
+# 6    0x00518ddb: 'EnumDispProc + 0x21ddb'
+# 7    0x52b539f1: 'TclNREvalObjv + 0x3e1'
+StackWalk failed 299
+# End of Stack Trace
+
+# Current time Tue Apr 23 13:20:39 2024
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "2020.2"
+# Version = "2020.04"
+# Date = "Apr 19 2020"
+# Platform = win32
+
+Exception c0000005 has occurred at address 52bf9e6f. Traceback:
+# 0    0x52bf9e6f: 'Tcl_GetString + 0xf'
+# 1    0x52be1f5a: 'TclListObjSetElement + 0x31a'
+# 2    0x52b53a49: 'TclNRRunCallbacks + 0x49'
+# 3    0x52be114d: 'Tcl_ListObjReplace + 0x4d'
+# 4    0x52be09fc: 'Tcl_UpdateLinkedVar + 0xa8c'
+# 5    0x0051eb4e: 'EnumDispProc + 0x27b4e'
+# 6    0x00518ddb: 'EnumDispProc + 0x21ddb'
+# 7    0x52b539f1: 'TclNREvalObjv + 0x3e1'
+StackWalk failed 299
+# End of Stack Trace
+
+# Current time Tue Apr 23 13:20:39 2024
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "2020.2"
+# Version = "2020.04"
+# Date = "Apr 19 2020"
+# Platform = win32
+
+Exception c0000005 has occurred at address 52bf9e6f. Traceback:
+# 0    0x52bf9e6f: 'Tcl_GetString + 0xf'
+# 1    0x52be1f5a: 'TclListObjSetElement + 0x31a'
+# 2    0x52b53a49: 'TclNRRunCallbacks + 0x49'
+# 3    0x52be114d: 'Tcl_ListObjReplace + 0x4d'
+# 4    0x52be09fc: 'Tcl_UpdateLinkedVar + 0xa8c'
+# 5    0x0051eb4e: 'EnumDispProc + 0x27b4e'
+# 6    0x00518ddb: 'EnumDispProc + 0x21ddb'
+# 7    0x52b539f1: 'TclNREvalObjv + 0x3e1'
+StackWalk failed 299
+# End of Stack Trace
+

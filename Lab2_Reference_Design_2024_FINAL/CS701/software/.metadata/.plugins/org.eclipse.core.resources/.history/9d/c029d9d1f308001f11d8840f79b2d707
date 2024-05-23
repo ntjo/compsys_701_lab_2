@@ -1,0 +1,129 @@
+#include <stdint.h>
+#include "io.h"
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+
+#define KEY_BASE BUTTON_PIO_BASE
+#define LEDR_BASE LED_PIO_BASE
+
+#define SEND_DATA_BASE NOC_32_BASE
+#define SEND_ADDR_BASE NOC_8_BASE
+#define RECV_DATA_BASE NOC_32_BASE
+#define RECV_ADDR_BASE NOC_8_BASE
+
+int main() {
+    alt_u32 key, ledr;
+    alt_u32 hexn = 0x000000;
+    alt_u8 edge = 0;
+    alt_u8 state = 0;
+    alt_u32 recv_data, send_data, send_addr;
+
+    while(1) {
+        key = IORD_ALTERA_AVALON_PIO_DATA(KEY_BASE);
+
+        // Check for KEY0 press
+        if ((key & 0x01) == 0 && edge == 1) {
+        	printf("button pressed\n");
+            if (state > 4)
+                state = 4;
+            else
+                state = 9;
+            hexn++;
+        }
+
+        if ((key & 0x01) == 1 && edge == 0) {
+        	printf("button released\n");
+
+
+        }
+        edge = key & 0x1;
+
+        // Process data if available
+        recv_data = IORD(RECV_DATA_BASE, 0);
+        if ((recv_data & 0xF0000000) == 0x80000000 && ((recv_data >> 16) & 0x01) == 0 && ((key >> 2) & 0x01) == 1) {
+            send_addr = 0x01;
+            send_data = recv_data;
+        } else if ((recv_data & 0xF0000000) == 0x80000000 && ((recv_data >> 16) & 0x01) == 1 && ((key >> 1) & 0x01) == 1) {
+            send_addr = 0x01;
+            send_data = recv_data;
+        } else {
+            // Otherwise send configuration commands
+            // State 0 is disabled, state 5 is enabled
+            switch (state) {
+                // Enable DAC channel 0
+                case 9:
+                    send_addr = 0x01;
+                    send_data = 0xb1020000;
+                    state = 8;
+                    break;
+
+                // Enable DAC channel 1
+                case 8:
+                    send_addr = 0x01;
+                    send_data = 0xb1030000;
+                    state = 7;
+                    break;
+
+                // Enable ADC channel 0
+                case 7:
+                    send_addr = 0x00;
+                    send_data = 0xa0220000;
+                    state = 6;
+                    break;
+
+                // Enable ADC channel 1
+                case 6:
+                    send_addr = 0x00;
+                    send_data = 0xa0230000;
+                    state = 5;
+                    break;
+
+                // Disable ADC channel 0
+                case 4:
+                    send_addr = 0x00;
+                    send_data = 0xa0000000;
+                    state = 3;
+                    break;
+
+                // Disable ADC channel 1
+                case 3:
+                    send_addr = 0x00;
+                    send_data = 0xa0010000;
+                    state = 2;
+                    break;
+
+                // Disable DAC channel 0
+                case 2:
+                    send_addr = 0x01;
+                    send_data = 0xb1000000;
+                    state = 1;
+                    break;
+
+                // Disable DAC channel 1
+                case 1:
+                    send_addr = 0x01;
+                    send_data = 0xb1010000;
+                    state = 0;
+                    break;
+
+                default:
+                    send_addr = 0x01;
+                    send_data = 0x00000000;
+                    break;
+            }
+        }
+
+        IOWR(SEND_ADDR_BASE, 0, send_addr);
+        IOWR(SEND_DATA_BASE, 0, send_data);
+
+        ledr = IORD_ALTERA_AVALON_PIO_DATA(LEDR_BASE);
+        IOWR_ALTERA_AVALON_PIO_DATA(LEDR_BASE, ledr);
+
+        // Output hex values
+//        IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, (hexn & 0x0000007F));
+//        IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, ((hexn >> 7) & 0x0000007F));
+//        IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, ((hexn >> 14) & 0x0000007F));
+//        IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, ((hexn >> 21) & 0x0000007F));
+    }
+    return 0;
+}

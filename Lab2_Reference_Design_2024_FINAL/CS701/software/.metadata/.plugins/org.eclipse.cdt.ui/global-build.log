@@ -1,0 +1,943 @@
+18:39:00 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:76:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:61:11: warning: unused variable 'bitmask' [-Wunused-variable]
+  uint16_t bitmask = IORD_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE);
+           ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+18:39:10 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+18:39:12 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+12:49:09 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+12:49:12 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+12:49:43 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+12:49:45 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+12:59:52 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+12:59:55 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:00:51 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:00:54 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:11:18 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:64:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  printf("\n %d \n", dataNOCRD);
+         ^
+main.c:64:9: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+main.c:74:10: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("\n %d \n", dataNOCRD);
+          ^
+main.c:74:10: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+main.c:76:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:61:11: warning: unused variable 'bitmask' [-Wunused-variable]
+  uint16_t bitmask = IORD_ALTERA_AVALON_PIO_DATA(LED_PIO_BASE);
+           ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:11:25 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:11:32 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:11:34 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:17:30 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:76:10: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("\n %d \n", dataNOCRD);
+          ^
+main.c:76:10: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+main.c:78:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:17:38 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:18:29 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:78:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:18:34 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:19:02 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:78:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:19:06 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:19:14 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:19:15 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:20:26 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:77:10: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   printf(" %s ", state);
+          ^
+main.c:77:10: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+main.c:79:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:74:7: warning: unused variable 'addrNOCRD' [-Wunused-variable]
+   int addrNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
+       ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:20:30 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:20:45 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:79:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:74:7: warning: unused variable 'addrNOCRD' [-Wunused-variable]
+   int addrNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
+       ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:20:49 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:20:55 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:20:56 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:24:08 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:80:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:75:7: warning: unused variable 'addrNOCRD' [-Wunused-variable]
+   int addrNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
+       ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:24:12 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:24:20 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:24:22 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:24:56 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:80:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:75:7: warning: unused variable 'addrNOCRD' [-Wunused-variable]
+   int addrNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
+       ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65512 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:24:59 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:25:19 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:25:21 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:25:25 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:25:26 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:27:32 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:27:35 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:29:24 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:80:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:75:7: warning: unused variable 'addrNOCRD' [-Wunused-variable]
+   int addrNOCRD = IORD_ALTERA_AVALON_PIO_DATA(NOC_8_BASE);
+       ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 18 KBytes program size (code + initialized data).
+Info:                             65513 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:29:32 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:29:38 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:29:40 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:45:49 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:68:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:64:6: warning: variable 'addrNOCRD' set but not used [-Wunused-but-set-variable]
+  int addrNOCRD;
+      ^
+main.c:62:6: warning: unused variable 'dataNOCsplit' [-Wunused-variable]
+  int dataNOCsplit[8];
+      ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 15 KBytes program size (code + initialized data).
+Info:                             65515 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:46:00 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:46:17 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:46:20 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:58:32 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:70:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:64:6: warning: variable 'addrNOCRD' set but not used [-Wunused-but-set-variable]
+  int addrNOCRD;
+      ^
+main.c:62:6: warning: unused variable 'dataNOCsplit' [-Wunused-variable]
+  int dataNOCsplit[8];
+      ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+main.c:108:14: warning: 'recv_data' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    send_data = recv_data;
+              ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 15 KBytes program size (code + initialized data).
+Info:                             65515 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:58:41 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:58:50 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:58:51 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:00:22 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:70:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:64:6: warning: variable 'addrNOCRD' set but not used [-Wunused-but-set-variable]
+  int addrNOCRD;
+      ^
+main.c:62:6: warning: unused variable 'dataNOCsplit' [-Wunused-variable]
+  int dataNOCsplit[8];
+      ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+main.c:115:14: warning: 'recv_data' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    send_data = recv_data;
+              ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 16 KBytes program size (code + initialized data).
+Info:                             65514 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+14:00:27 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+14:00:41 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:00:43 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+14:00:47 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:00:49 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:03:49 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:70:3: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   usleep(250000);
+   ^
+main.c:64:6: warning: variable 'addrNOCRD' set but not used [-Wunused-but-set-variable]
+  int addrNOCRD;
+      ^
+main.c:62:6: warning: unused variable 'dataNOCsplit' [-Wunused-variable]
+  int dataNOCsplit[8];
+      ^
+main.c:59:6: warning: unused variable 'input' [-Wunused-variable]
+  int input;
+      ^
+main.c:58:18: warning: unused variable 'KEY2' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+                  ^
+main.c:58:12: warning: unused variable 'KEY1' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+            ^
+main.c:58:6: warning: unused variable 'KEY0' [-Wunused-variable]
+  int KEY0, KEY1, KEY2;
+      ^
+main.c:112:32: warning: 'dataNOCRD' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if ((recv_data & 0xF0000000) && ((dataNOCRD >> 16) & 0x01) && (IORD_ALTERA_AVALON_PIO_DATA(BUTTON_PIO_BASE) == 11) ) {
+                                ^
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 16 KBytes program size (code + initialized data).
+Info:                             65514 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+14:03:54 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+14:04:12 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:04:15 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:17:26 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:26:10: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+          printf("button pressed\n");
+          ^
+main.c:26:10: warning: incompatible implicit declaration of built-in function 'printf'
+main.c:26:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+main.c:35:10: warning: incompatible implicit declaration of built-in function 'printf'
+          printf("button released\n");
+          ^
+main.c:35:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 15 KBytes program size (code + initialized data).
+Info:                             65515 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+14:17:33 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+14:17:41 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:17:43 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:21:20 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:26:10: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+          printf("button pressed\n");
+          ^
+main.c:26:10: warning: incompatible implicit declaration of built-in function 'printf'
+main.c:26:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+main.c:35:10: warning: incompatible implicit declaration of built-in function 'printf'
+          printf("button released\n");
+          ^
+main.c:35:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 15 KBytes program size (code + initialized data).
+Info:                             65515 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+14:21:24 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+14:21:46 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:21:48 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:28:20 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:26:10: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+          printf("button pressed\n");
+          ^
+main.c:26:10: warning: incompatible implicit declaration of built-in function 'printf'
+main.c:26:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+main.c:35:10: warning: incompatible implicit declaration of built-in function 'printf'
+          printf("button released\n");
+          ^
+main.c:35:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 15 KBytes program size (code + initialized data).
+Info:                             65515 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+14:28:29 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+14:28:37 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:28:39 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:44:06 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:26:10: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+          printf("button pressed\n");
+          ^
+main.c:26:10: warning: incompatible implicit declaration of built-in function 'printf'
+main.c:26:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+main.c:35:10: warning: incompatible implicit declaration of built-in function 'printf'
+          printf("button released\n");
+          ^
+main.c:35:10: note: include '<stdio.h>' or provide a declaration of 'printf'
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 15 KBytes program size (code + initialized data).
+Info:                             65515 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+14:44:16 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+14:44:24 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+14:44:26 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:55:33 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_2_Example_Replace_bsp//HAL/inc -I../Lab_2_Example_Replace_bsp/ -I../Lab_2_Example_Replace_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking Lab_2_Example_Replace.elf
+nios2-elf-g++  -T'../Lab_2_Example_Replace_bsp//linker.x' -msys-crt0='../Lab_2_Example_Replace_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_2_Example_Replace_bsp/  -msmallc  -Wl,-Map=Lab_2_Example_Replace.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab_2_Example_Replace.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab_2_Example_Replace.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name Nios_System_2A --quartus_project_dir "H:/echome/701_LAB_2/Lab2_Reference_Design_2024_FINAL/CS701" --jdi ../..//output_files/DE1-SoC.jdi --sopcinfo H:/echome/701_LAB_2/Lab2_Reference_Design_2024_FINAL/CS701/software/Lab_2_Example_Replace_bsp/../../Nios_System_2A.sopcinfo
+Info: (Lab_2_Example_Replace.elf) 14 KBytes program size (code + initialized data).
+Info:                             65516 KBytes free for stack + heap.
+Info: Creating Lab_2_Example_Replace.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_2_Example_Replace.elf >Lab_2_Example_Replace.objdump
+[Lab_2_Example_Replace build complete]
+13:55:40 **** Build of configuration Nios II for project Lab_2_Example_Replace_bsp ****
+make all 
+[BSP build complete]
+13:55:51 **** Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:55:53 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
+13:57:28 **** Incremental Build of configuration Nios II for project Lab_2_Example_Replace ****
+make all 
+Info: Building ../Lab_2_Example_Replace_bsp/
+C:/intelFPGA/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_2_Example_Replace_bsp/
+[BSP build complete]
+[Lab_2_Example_Replace build complete]
