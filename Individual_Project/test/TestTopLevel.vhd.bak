@@ -53,14 +53,9 @@ begin
 		send  => send_port(1),
 		recv  => recv_port(1)
 	);
-	test_avg : entity work.TestAvg
-	generic map (
-		forward => 2
-	)
-	port map (
-		send => send_port(3),
-		recv => recv_port(3)
-	);
+
+	
+	
 	
 
 end architecture;

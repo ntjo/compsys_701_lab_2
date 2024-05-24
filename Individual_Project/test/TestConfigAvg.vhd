@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 library work;
 use work.TdmaMinTypes.all;
 
-entity TestAvg is
+entity TestRecop is
     generic (
         forward : natural
     );
@@ -15,7 +15,7 @@ entity TestAvg is
     );
 end entity;
 
-architecture sim of TestAvg is
+architecture sim of TestRecop is
 
 begin
 
@@ -27,7 +27,7 @@ begin
         wait for 50 ns;
         
         -- Set send.data to all zeros
-        send.data <= x"A0120000"; -- 1010 0000 0001 0011 0000 0000
+        send.data <= x"A0130000"; -- 1010 0000 0001 0011 0000 0000
         
         -- Wait indefinitely to prevent the process from terminating
         wait for 20 ns;

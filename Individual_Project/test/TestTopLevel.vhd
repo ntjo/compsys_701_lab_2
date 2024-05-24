@@ -53,7 +53,8 @@ begin
 		send  => send_port(1),
 		recv  => recv_port(1)
 	);
-	test_avg : entity work.TestAvg
+	
+	test_recop : entity work.TestRecop
 	generic map (
 		forward => 2
 	)

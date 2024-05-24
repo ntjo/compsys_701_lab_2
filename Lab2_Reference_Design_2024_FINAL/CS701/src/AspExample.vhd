@@ -62,12 +62,12 @@ begin
 				case state is
 					when 10 =>
 						send.addr <= x"03";
-						send.data <= x"93100000";
+						send.data <= x"A3130000"; -- 1010 0011 0001 0010 0000 0000 0000 0000
 						state := 9;
 					-- Enable DAC channel 0
 					when 9 =>
 						send.addr <= x"01";
-						send.data <= x"b1020000";
+						send.data <= x"b1020000"; -- 1011 0001 0000 0010
 						state := 8;
 
 					-- Enable DAC channel 1
