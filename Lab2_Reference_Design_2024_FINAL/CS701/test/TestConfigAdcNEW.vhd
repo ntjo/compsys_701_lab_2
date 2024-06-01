@@ -5,17 +5,18 @@ use ieee.std_logic_1164.all;
 library work;
 use work.TdmaMinTypes.all;
 
-entity TestAvg is
+entity tb_ConfigAdcAspNEW is
     generic (
         forward : natural
     );
     port (
+        clock : in std_logic;
         send  : out tdma_min_port;
         recv  : in  tdma_min_port
     );
 end entity;
 
-architecture sim of TestAvg is
+architecture sim of tb_ConfigAdcAspNEW is
 
 begin
 
@@ -27,7 +28,7 @@ begin
         wait for 50 ns;
         
         -- Set send.data to all zeros
-        send.data <= x"A0120000"; -- 1010 0000 0001 0011 0000 0000
+        send.data <= x"912A0001"; -- 1010 0000 0001 0011 0000 0000
         
         -- Wait indefinitely to prevent the process from terminating
         wait for 20 ns;

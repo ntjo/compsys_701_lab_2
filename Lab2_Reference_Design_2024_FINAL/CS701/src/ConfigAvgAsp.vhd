@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 library work;
 use work.TdmaMinTypes.all;
 
-entity ConfigAspAvg is	
+entity ConfigAvgAsp is	
 	port (
 		clock : in  std_logic;
 		reset : in 	std_logic := '0';
@@ -15,7 +15,7 @@ entity ConfigAspAvg is
 	);
 end entity;
 
-architecture rtl of ConfigAspAvg is
+architecture rtl of ConfigAvgAsp is
 	-- signals here 
 	type fifo_array is array (0 to 7) of signed(15 downto 0);	
 	signal fifo2 : fifo_array := (others => (others => '0'));
@@ -28,8 +28,10 @@ begin
 		variable fifo : fifo_array := (others => (others => '0'));
 		variable tail : natural range 0 to 7 := 0;
 		variable temp: signed(15 downto 0);
+		variable prev_data : signed(15 downto 0) := (others => '0');
 	begin
 		if rising_edge(clock) then
+			temp := (others => '0');
 			if reset = '1' then
 				sum 	:= (others => '0');
 				fifo 	:= (others => (others => '0'));
@@ -38,23 +40,24 @@ begin
 				send.data <= (others => '0');
 				
 			elsif recv.data(31 downto 28) = "1000" and enable = '1' then -- data signal
-			
-				temp := signed(recv.data(15 downto 0));
+				if (recv.data(15 downto 0) /= std_logic_vector(prev_data)) then 
+					temp := signed(recv.data(15 downto 0));
 
-				sum := (sum + temp - fifo(tail));
+					sum := (sum + temp - fifo(tail));
 
-				fifo(tail) := temp;
+					fifo(tail) := temp;
 
-				tail := (tail + 1) mod window_size;
+					tail := (tail + 1) mod window_size;
 
-				--send.data <= x"8000" & std_logic_vector(sum / window_size);
-				if window_size = 4 then
-					send.data <= x"8000" & std_logic_vector(shift_right(sum, 2));
-				else 
-					send.data <= x"8000" & std_logic_vector(shift_right(sum, 3));
+					if window_size = 4 then
+						send.data <= x"8000" & std_logic_vector(shift_right(sum, 2));
+						prev_data := shift_right(sum, 2);
+					else 
+						send.data <= x"8000" & std_logic_vector(shift_right(sum, 3));
+						prev_data := shift_right(sum, 3);
+					end if;
+
 				end if;
-				send.addr <= x"01";
-
 			elsif recv.data(31 downto 28) = "1010" then -- configuration signal / mode: 0 (window_size = 4)
 				send.addr <= "0000" & recv.data(23 downto 20);
 				
