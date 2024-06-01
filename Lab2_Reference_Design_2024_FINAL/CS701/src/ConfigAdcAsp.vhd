@@ -29,16 +29,17 @@ architecture beh of ConfigAdcAsp is
 
 	-- signals here
 	signal sample_delay   : std_logic_vector(15 downto 0) := (others => '0');
-    signal bit_sel        : std_logic_vector(1 downto 0) := (others => '0');
+   signal bit_sel        : std_logic_vector(1 downto 0) := (others => '0');
 	signal sample_rate    : unsigned(31 downto 0) := (others => '0');
 
 	-- ROM STUFF
-    signal addr           : std_logic_vector(7 downto 0) := (others => '0');
-    signal rom_data       : std_logic_vector(11 downto 0)
+   signal addr           : std_logic_vector(7 downto 0) := (others => '0');
+   signal rom_data       : std_logic_vector(11 downto 0);
 
-    ;
+	
+begin
 
-	-- ROM INSTANTIATION
+-- ROM INSTANTIATION
 	rom_inst : rom_test
 	port map(
 		address => addr,
@@ -47,23 +48,20 @@ architecture beh of ConfigAdcAsp is
 	);
 
 
-begin
-
-
-
 	process(clock)
+	
 	begin
 		if rising_edge(clock) then
 			if reset = '1' then
 				-- reset things to 0
 				sample_delay <= (others => '0');
-                bit_sel <= (others => '0');
-                sample_rate <= (others => '0');
+            bit_sel <= (others => '0');
+            sample_rate <= (others => '0');
 			elsif recv.data(31 downto 28) = "1001" then
-                -- Configuration message
-                sample_delay <= recv.data(15 downto 0);
-                bit_sel <= recv.data(19 downto 18);
-                sample_rate <= unsigned(recv.data(15 downto 0)) + 1;
+            -- Configuration message
+            sample_delay <= recv.data(15 downto 0);
+            bit_sel <= recv.data(19 downto 18);
+            sample_rate <= unsigned(recv.data(15 downto 0)) + 1;
 			end if;
 		end if;
 	end process;
@@ -71,19 +69,19 @@ begin
 	process(clock)
 	
 	-- variables here
-	new_data 	: std_logic := '0';
-	data_ready	: std_logic := '0';
-	counter 	: std_logic_vector(15 downto 0) := (others => '0');
+	variable new_data 	: std_logic := '0';
+	variable data_ready	: std_logic := '0';
+	variable counter 		: unsigned(31 downto 0) := (others => '0');
 	
 	begin
 		if rising_edge(clock) then
 			if reset = '1' then
 				-- reset things to 0
-				counter <= (others => '0');
-               	addr <= (others => '0');
-                new_data <= '0';
-                data_ready <= '0';
-                send.data <= (others => '0');
+				counter := (others => '0');
+            addr <= (others => '0');
+            new_data := '0';
+            data_ready := '0';
+            send.data <= (others => '0');
 				
 			elsif counter = 0 then
         		if new_data = '1' then
